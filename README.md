@@ -1,8 +1,8 @@
-# 🛡️ Servidor de Mensageria Segura
+# Servidor de Mensageria Segura
 
 O servidor atua como um roteador de mensagens cifradas, garantindo confidencialidade, integridade, autenticidade e sigilo perfeito através de um protocolo criptográfico personalizado.
 
-## 🔐 Especificações de Segurança
+## Especificações de Segurança
 
 O servidor implementa rigorosamente os seguintes mecanismos:
 
@@ -12,12 +12,12 @@ O servidor implementa rigorosamente os seguintes mecanismos:
 * **Cifragem de Transporte:** AES-128-GCM (Authenticated Encryption).
 * **Proteção contra Replay:** Validação de números de sequência (`seq_no`) monotônicos.
 
-## 🚀 Pré-requisitos
+## Pré-requisitos
 
 * **Node.js**: Versão 16.0.0 ou superior (necessário para suporte nativo a `crypto.hkdf` e `crypto.webcrypto`).
 * **NPM** ou **Yarn**.
 
-## 📦 Instalação
+## Instalação
 
 1.  Clone este repositório:
     ```bash
@@ -30,7 +30,7 @@ O servidor implementa rigorosamente os seguintes mecanismos:
     npm install
     ```
 
-## ⚙️ Configuração (.env)
+## Configuração (.env)
 
 O servidor utiliza variáveis de ambiente para configuração.
 
