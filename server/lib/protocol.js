@@ -95,6 +95,12 @@ class ProtocolHandler {
       const header = buf.read(HEADER_SIZE);
       const ciphertextTag = buf.read(lenCipher);
 
+      console.log("\n[ESPIÃO] O que trafegou na rede:", ciphertextTag);
+      console.log(
+        "[ESPIÃO] Tentando ler como texto:",
+        ciphertextTag.toString("utf-8"),
+      );
+
       // Parsing dos campos do header
       const nonce = header.subarray(0, 12);
       const senderId = header.subarray(12, 28);
