@@ -43,3 +43,33 @@ SERVER_PORT=8888
 
 # IP de bind (use 0.0.0.0 para aceitar conexões externas ou 127.0.0.1 para local)
 SERVER_HOST=127.0.0.1
+```
+
+## Como Rodar a Demonstração
+Para simular um chat entre dois usuários (ex: Alice e Bob), você precisará de 3 terminais abertos.
+
+### 1. Iniciar o Servidor
+O servidor deve ser o primeiro a rodar. Ele gerará uma identidade RSA temporária em memória.
+
+```env
+node server.js
+```
+
+### 2. Iniciar Cliente Alice
+Em um novo terminal, navegue até a pasta do cliente e conecte definindo o ID de origem ("Alice") e o ID de destino ("Bob").
+
+```env
+node client.js Alice Bob
+```
+
+### 3. Iniciar Cliente Bob
+Em um terceiro terminal, conecte o Bob definindo que ele quer falar com a Alice.
+
+```env
+node client.js Bob Alice
+```
+
+### Utilizando o Chat
+No terminal da Alice, digite uma mensagem e pressione Enter.
+A mensagem aparecerá decifrada instantaneamente no terminal do Bob.
+Observe o terminal do Servidor: ele mostrará o log de roteamento, provando que a mensagem passou por lá mas o conteúdo permaneceu seguro.
